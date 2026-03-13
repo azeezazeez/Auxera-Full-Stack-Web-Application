@@ -4,21 +4,21 @@ import { ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
 
 const CAROUSEL_IMAGES = [
   {
-    url: 'https://images.pexels.com/photos/994234/pexels-photo-994234.jpeg?auto=compress&cs=tinysrgb&w=600',
+    url: 'https://unsplash.com/photos/6cRRZ5Is7YU',
     title: 'Golden Excellence',
-    subtitle: 'Redefined.',
+    subtitle: 'Luxurious.',
     description: 'Discover our curated selection of premium essentials designed for the modern individual.'
   },
   {
-    url: 'https://images.pexels.com/photos/190819/pexels-photo-190819.jpeg?auto=compress&cs=tinysrgb&w=600',
+    url: 'https://unsplash.com/@glitzstorm',
     title: 'Timeless Style',
     subtitle: 'Elevated.',
     description: 'Explore our new season arrivals featuring sustainable materials and classic silhouettes.'
   },
   {
-    url: 'https://images.pexels.com/photos/18105/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=600',
-    title: 'Modern Craft',
-    subtitle: 'Perfected.',
+    url: 'https://unsplash.com/photos/a-person-sitting-at-a-table-with-a-laptop-and-papers-76CqzX0BHf8',
+    title: 'MacBook Pro',
+    subtitle: 'Excellence.',
     description: 'Every piece is a testament to our commitment to quality and attention to detail.'
   }
 ];
