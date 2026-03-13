@@ -4,13 +4,13 @@ import { ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
 
 const CAROUSEL_IMAGES = [
   {
-    url: 'https://images.unsplash.com/photo-1539008835657-9e8e9680c956?w=600&auto=format&fit=crop',
+    url: 'https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=600&auto=format&fit=crop',
     title: 'Golden Excellence',
     subtitle: 'Luxurious.',
     description: 'Discover our curated selection of premium essentials designed for the modern individual.'
   },
   {
-    url: 'https://images.unsplash.com/photo-1587836374828-4dbafa94cf78?w=600&auto=format&fit=crop',
+    url: 'https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=600&auto=format&fit=crop',
     title: 'Timeless Style',
     subtitle: 'Elevated.',
     description: 'Explore our new season arrivals featuring sustainable materials and classic silhouettes.'
