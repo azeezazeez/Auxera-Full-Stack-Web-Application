@@ -132,7 +132,7 @@ const AdminDashboard: React.FC = () => {
 
     if (loading) {
         return (
-            <div className="min-h-screen flex items-center justify-center">
+            <div className="min-h-screen flex items-center justify-center pt-20"> {/* Added pt-20 for navbar spacing */}
                 <div className="text-center">
                     <RefreshCw className="w-12 h-12 animate-spin text-brand-600 mx-auto mb-4" />
                     <p className="text-gray-600 dark:text-gray-400">Loading dashboard...</p>
@@ -143,7 +143,7 @@ const AdminDashboard: React.FC = () => {
 
     if (error) {
         return (
-            <div className="min-h-screen flex items-center justify-center">
+            <div className="min-h-screen flex items-center justify-center pt-20"> {/* Added pt-20 for navbar spacing */}
                 <div className="text-center">
                     <XCircle className="w-12 h-12 text-red-500 mx-auto mb-4" />
                     <p className="text-red-600 dark:text-red-400 mb-4">{error}</p>
@@ -159,9 +159,9 @@ const AdminDashboard: React.FC = () => {
     }
 
     return (
-        <div className="min-h-screen bg-gray-50 dark:bg-brand-950">
+        <div className="min-h-screen bg-gray-50 dark:bg-brand-950 pt-20"> {/* Added pt-20 for navbar spacing */}
             {/* Header */}
-            <div className="bg-white dark:bg-brand-900 border-b border-gray-200 dark:border-brand-800 sticky top-0 z-10 ">
+            <div className="bg-white dark:bg-brand-900 border-b border-gray-200 dark:border-brand-800 sticky top-20 z-10"> {/* Changed top-0 to top-20 */}
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
                     <div className="flex items-center justify-between">
                         <div>
