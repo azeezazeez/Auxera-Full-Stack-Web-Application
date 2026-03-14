@@ -82,12 +82,7 @@ public class EmailService {
                         YOUR VERIFICATION CODE
                     </p>
                     <!-- Fixed: OTP container with proper centering -->
-<div style="
-    text-align: center;
-    margin: 20px 0;
-    padding: 10px;
-    width: 100%;
-">
+<div style="text-align:center; width:100%;">
     <span style="
         font-family: 'Courier New', monospace;
         font-size:36px;
@@ -99,7 +94,6 @@ public class EmailService {
         border-radius:8px;
         display:inline-block;
         margin:0 auto;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     ">""" + otp + """</span>
 </div>
                 </div>
