@@ -1,6 +1,6 @@
 import { Product, CartItem } from '../types';
 
-const BASE_URL = 'http://localhost:8080/api';
+const BASE_URL = ' https://backend-38f0.onrender.com';
 
 // Admin types
 export interface AdminOrder {
