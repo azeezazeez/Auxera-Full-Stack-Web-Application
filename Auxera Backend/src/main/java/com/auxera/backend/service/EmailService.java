@@ -82,21 +82,26 @@ public class EmailService {
                         YOUR VERIFICATION CODE
                     </p>
                     <!-- Fixed: OTP container with proper centering -->
-                    <div style="text-align:center;">
-                        <span style="
-                            font-family: 'Courier New', monospace;
-                            font-size:36px;
-                            font-weight:600;
-                            letter-spacing:8px;
-                            background:#1a1a1a;
-                            color:white;
-                            padding:15px 30px;
-                            border-radius:8px;
-                            display:inline-block;
-                            margin:0 auto;">
-                            """ + otp + """
-                        </span>
-                    </div>
+<div style="
+    text-align: center;
+    margin: 20px 0;
+    padding: 10px;
+    width: 100%;
+">
+    <span style="
+        font-family: 'Courier New', monospace;
+        font-size:36px;
+        font-weight:600;
+        letter-spacing:8px;
+        background:#1a1a1a;
+        color:white;
+        padding:15px 30px;
+        border-radius:8px;
+        display:inline-block;
+        margin:0 auto;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    ">""" + otp + """</span>
+</div>
                 </div>
                 
                 <div style="background:#f9f9f9; padding:20px; border-radius:12px; margin:30px 0; text-align:center;">
