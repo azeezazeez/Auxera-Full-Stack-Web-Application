@@ -1,4 +1,58 @@
-private String buildOtpHtml(String otp) {
+package com.auxera.backend.service;
+
+import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.http.*;
+import org.springframework.scheduling.annotation.Async;
+import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
+
+import java.util.Map;
+
+@Service
+@RequiredArgsConstructor
+public class EmailService {
+
+    @Value("${brevo.api.key}")
+    private String brevoApiKey;
+
+    @Value("${user.mail}")
+    private String userEmail;
+
+    private final RestTemplate restTemplate = new RestTemplate();
+
+    @Async
+    public void sendOtp(String toEmail, String otp) {
+
+        String url = "https://api.brevo.com/v3/smtp/email";
+
+        Map<String, Object> requestBody = Map.of(
+                "sender", Map.of(
+                        "name", "Auxera",
+                        "email", userEmail
+                ),
+                "to", new Object[]{
+                        Map.of("email", toEmail)
+                },
+                "subject", "Reset Your Auxera Password",
+                "htmlContent", buildOtpHtml(otp)
+        );
+
+        HttpHeaders headers = new HttpHeaders();
+        headers.setContentType(MediaType.APPLICATION_JSON);
+        headers.set("api-key", brevoApiKey);
+
+        HttpEntity<Map<String, Object>> entity =
+                new HttpEntity<>(requestBody, headers);
+
+        try {
+            restTemplate.postForEntity(url, entity, String.class);
+        } catch (Exception e) {
+            throw new RuntimeException("Failed to send email via Brevo API", e);
+        }
+    }
+
+  private String buildOtpHtml(String otp) {
     return """
         <div style="font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background-color:#f5f5f5; padding:30px;">
             <div style="max-width:600px; margin:0 auto; background:white; border-radius:16px; padding:40px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
@@ -67,4 +121,5 @@ private String buildOtpHtml(String otp) {
             </div>
         </div>
         """;
+}
 }
