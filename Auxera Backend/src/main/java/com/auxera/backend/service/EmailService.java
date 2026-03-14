@@ -55,7 +55,7 @@ public class EmailService {
     private String buildOtpHtml(String otp) {
         return """
             <div style="font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background-color:#f5f5f5; padding:30px;">
-                <div style="max-width:600px; margin:0 auto; background:white; border-radius:16px; padding:40px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+                <div style="max-width:600px; margin:auto; background:white; border-radius:16px; padding:40px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
                     
                     <div style="text-align:center; margin-bottom:30px;">
                         <h1 style="font-family: 'Times New Roman', serif; font-size:32px; font-weight:700; letter-spacing:-1px; color:#1a1a1a; margin:0;">
@@ -78,10 +78,10 @@ public class EmailService {
                     </p>
                     
                     <div style="text-align:center; margin:40px 0;">
-                        <p style="color:#666; font-size:14px; margin-bottom:15px; letter-spacing:2px;">
+                        <p style="color:#666; font-size:14px; margin-bottom:15px; letter-spacing:2px; text-align:center;">
                             YOUR VERIFICATION CODE
                         </p>
-                        <div style="text-align:center; width:100%%;">
+                        <div style="display:flex; justify-content:center; align-items:center;">
                             <span style="
                                 font-family: 'Courier New', monospace;
                                 font-size:36px;
@@ -92,13 +92,14 @@ public class EmailService {
                                 padding:15px 30px;
                                 border-radius:8px;
                                 display:inline-block;
-                                margin:0 auto;
-                            ">""" + otp + """</span>
+                                margin:0 auto;">
+                                """ + otp + """
+                            </span>
                         </div>
                     </div>
                     
-                    <div style="background:#f9f9f9; padding:20px; border-radius:12px; margin:30px 0;">
-                        <p style="color:#666; font-size:14px; margin:0; text-align:center;">
+                    <div style="background:#f9f9f9; padding:20px; border-radius:12px; margin:30px 0; text-align:center;">
+                        <p style="color:#666; text-align:center; font-size:14px; margin:0;">
                             ⏰ This OTP is valid for <strong style="color:#1a1a1a;">5 minutes</strong>
                         </p>
                     </div>
