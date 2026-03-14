@@ -37,6 +37,3 @@ export const ToastContainer: React.FC = ({ messages, onRemove }) => {
   );
 };
 
-
-
-I want the notifications to come in the middle of the webpage.
